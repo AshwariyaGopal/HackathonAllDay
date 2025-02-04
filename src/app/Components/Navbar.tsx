@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import "@fortawesome/fontawesome-free/css/all.min.css";
+
 
 export default function Navbar() {
   return (
