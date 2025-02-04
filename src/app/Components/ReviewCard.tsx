@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 interface ReviewCardProps {
   name: string;
   rating: number;
@@ -55,7 +56,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({
         </h1>
 
         {/* Display image */}
-        <img
+        <Image
           src={imageSrc}
           alt="right"
           width={19.5}

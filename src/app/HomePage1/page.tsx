@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Card from "../Components/Card";
-import { imageOptimizer } from "next/dist/server/image-optimizer";
+
 import ReviewCard from "../Components/ReviewCard";
 import Footer from "../Components/Footer";
 
