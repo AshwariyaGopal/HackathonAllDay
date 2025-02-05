@@ -1,9 +1,22 @@
-// pages/product/[id].tsx
+
 import ProductDetail from "@/app/Components/ProductDetail";
 import { client } from "@/sanity/lib/client";
 import { Product } from "../../../../types/products";
 
-const Page = async ({ params: { id } }: { params: { id: string } }) => {
+interface ProductPageProps {
+  params: { id: string };
+}
+
+export async function generateStaticParams() {
+  // Fetch all product IDs from Sanity (Example Query)
+  const query = `*[_type == "products"]{ _id }`;
+  const products = await client.fetch(query);
+  return products.map((product: { _id: string }) => ({ id: product._id }));
+}
+
+export default async function Page({ params }: ProductPageProps) {
+  const { id } = params;
+
   const query = `*[ _type == "products" &&  _id == $id]{
     name,
     "id": _id,
@@ -32,6 +45,4 @@ const Page = async ({ params: { id } }: { params: { id: string } }) => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}
