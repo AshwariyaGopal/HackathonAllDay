@@ -2,7 +2,7 @@
 
 export interface Product {
    
-    _id: string;
+    _id: any;
     _type: "products"; // Sanity mein document type "products" hai
     name: string;
     price: number;

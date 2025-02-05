@@ -4,14 +4,14 @@ import { client } from "@/sanity/lib/client";
 import { Product } from "../../../../types/products";
 
 interface ProductPageProps {
-  params: { id: string };
+  params: { id: any };
 }
 
 export async function generateStaticParams() {
   // Fetch all product IDs from Sanity (Example Query)
   const query = `*[_type == "products"]{ _id }`;
   const products = await client.fetch(query);
-  return products.map((product: { _id: string }) => ({ id: product._id }));
+  return products.map((product: { _id: any }) => ({ id: product._id }));
 }
 
 export default async function Page({ params }: ProductPageProps) {
