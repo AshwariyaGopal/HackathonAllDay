@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className=" relative bg-[#F0F0F0] xl:mt-60 xs:mt-[600px]">
       {/* Footer Container */}
-      <div className="xl:w-[1296px] xl:h-full bg-[#F0F0F0] overflow-hidden xs:w-[392px] xs:h-full ">
+      <div className="xl:w-[1296px] xl:h-full bg-[#F0F0F0] overflow-hidden xs:w-[392px] xs:h-full xl:-ml-16">
         <div className="flex items-start justify-between">
           {/* Frame 52 Content Wrapper */}
           <div className="w-full flex xl:flex-row xl:items-start xl:justify-between py-12 mx-auto xs:flex-col">
@@ -130,7 +130,7 @@ export default function Footer() {
 
       {/* Subscribe to Newsletter Section */}
       <div
-        className="absolute xl:w-[1240px] xl:h-[180px] xl:top-[-85px] bg-black rounded-[20px] xl:flex xl:justify-between xl:items-center xl:px-16 xl:py-8 xl:gap-[153px] xl:ml-7
+        className="absolute xl:w-[1200px] xl:h-[180px] xl:top-[-85px] bg-black rounded-[20px] xl:flex xl:justify-between xl:items-center xl:px-16 xl:py-8 xl:gap-[153px] xl:-ml-4
       xl:mt-2 xs:w-[358px] xs:h-[293px] xs:top-0 xs:-mt-32 xs:ml-2 "
       >
         <h2 className="font-integral-cf font-bold xl:text-[40px] xs:text-[32px] xl:leading-[45px] xs:leading-[35px] xs:py-4 xs:px-4 text-white xs:ml-2 xs:mt-4">
